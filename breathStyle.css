@@ -10,6 +10,7 @@
     position: fixed;
     display: inline-grid;
     grid-template-columns: auto auto auto;
+    font-size: 2em;
 }
 
 #overlay span {
