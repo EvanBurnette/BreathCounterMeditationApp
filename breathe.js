@@ -1,8 +1,41 @@
 $(document).ready(function(){
+    
+var bRadius = Math.ceil($("body").width()/4)+10;
+var mRadius = bRadius + 25;
+var totalMinutes = 20;
+var breathTime = 7.5;
+
+$("#mslider").roundSlider({
+        sliderType: "min-range",
+        handleShape: "square",
+        radius: mRadius,
+        value: 20,
+        lineCap: "round",
+        width: 20,
+        min: 0,
+        max: 60,
+        step: 1,
+        change: function (args) {
+            totalMinutes = args.value;
+        $("#mTime").html(args.value);}
+            });
+$("#bslider").roundSlider({
+    sliderType: "min-range",
+    handleShape: "Square",
+    radius: bRadius,
+    value: 7.5,
+    step: 0.5,
+    min: 0.5,
+    max: 15,
+    width: 20,
+    lineCap: "round",
+    change: function (args) {
+        breathTime = args.value;
+    $("#bTime").html(args.value);}
+        });
     $("#lungs").one("click", (function(){
-        var totalMinutes = document.getElementById("totalTime").value;//minutes
         var totalSeconds = totalMinutes*60;
-        var breathTime = document.getElementById("breathTime").value;
+        
         var totalBreaths = Math.ceil((totalSeconds)/breathTime);
         var count = 1;
         $("#lungs").css("animation-name", "lungsAnimation")

@@ -2,6 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="breathStyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" /> 
 </head>
 
 <body>
@@ -9,10 +11,17 @@
         <div id="lungs">
             <p id="counter">Click to Start</p>
         </div>
+        <div id="overlay">
+        <div id="mslider"></div>
+        <div id="bslider"></div>
+        <p>Session time: <span id="mTime">20</span> minutes</p>
+        <p>Breath time: <span id="bTime">7.5</span> seconds</p></div>
+
     </div>
-    <div id="overlay"><span>Meditation time in minutes </span><input id="totalTime" type="number" value="20"><br>
-    <span>Breath duration in seconds </span><input id="breathTime" type="number" value="7.5"></div>
-    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
     <script type="text/javascript" src="breathe.js"></script>
 </body>
 
