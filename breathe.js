@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
-var bRadius = Math.ceil($("body").width()/4)+10;
-var mRadius = bRadius + 25;
+var bRadius = Math.ceil($("body").width()/4)+25;
+var mRadius = bRadius + 50 + 10;
 var totalMinutes = 20;
 var breathTime = 7.5;
 
@@ -11,7 +11,7 @@ $("#mslider").roundSlider({
         radius: mRadius,
         value: 20,
         lineCap: "round",
-        width: 20,
+        width: 50,
         min: 0,
         max: 60,
         step: 1,
@@ -27,7 +27,7 @@ $("#bslider").roundSlider({
     step: 0.5,
     min: 0.5,
     max: 15,
-    width: 20,
+    width: 50,
     lineCap: "round",
     change: function (args) {
         breathTime = args.value;
