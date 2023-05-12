@@ -52,15 +52,23 @@ $("#bslider").roundSlider({
         function timer() {
             count++;
             if (count == totalBreaths + 1)
-            {
+            {   
+                breathIn.pause();
+                breathOut.pause();
+                breathIn.currentTime = 0;
+                breathOut.currentTime = 0;
                 bell.play();
                 $("#counter").html("Morning");
                 return;
             }
             if (count % 2 == 0) {
+                breathIn.pause();
+                breathIn.currentTime = 0;
                 breathOut.play();
             }
             else {
+                breathOut.pause();
+                breathOut.currentTime = 0;
                 breathIn.play();
             }
             $("#counter").html(count); // watch for spelling
