@@ -47,12 +47,12 @@ $("#bslider").roundSlider({
         var breathIn = new Audio('breathIn.ogg');
         breathIn.play();
         var breathOut = new Audio('breathOut.ogg');
+        let bell = new Audio('/juskiddink_singing-bowl-2.ogg');
         $("#overlay").toggle("slow");
         function timer() {
             count++;
             if (count == totalBreaths + 1)
             {
-                let bell = new Audio('/juskiddink_singing-bowl-2.ogg');
                 bell.play();
                 $("#counter").html("Morning");
                 return;
